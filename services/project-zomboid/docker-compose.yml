@@ -1,1 +1,34 @@
  
+version: "3.7"
+services:
+  ProjectZomboidDedicatedServer:
+    image: danixu86/project-zomboid-dedicated-server:latest
+    restart: unless-stopped
+    ports:
+      - "16261:16261/udp"
+      - "16262:16262/udp"
+      - "27015:27015/tcp"
+    environment:
+      LANG: "en_EN.UTF-8"
+      NOSTEAM: "False"
+      CACHEDIR: ""
+      MODFOLDERS: "workshop,steam,mods"
+      DEBUG: "False"
+      ADMINUSERNAME: "admin"
+      ADMINPASSWORD: "0118"
+      SERVERNAME: ""
+      SERVERPRESET: ""
+      IP: ""
+      PORT: "16261"
+      STEAMVAC: "True"
+      STEAMPORT1: ""
+      STEAMPORT2: ""
+      MEMORY: "4096m"
+      SOFTRESET: "False"
+      MOD_IDS: ""
+      WORKSHOP_IDS: ""
+    volumes:
+      # Server data
+      - /home/soulnail/PZ/data:/home/steam/Zomboid
+      # Workshop mods folder
+      - /home/soulnail/PZ/workshop-mods:/home/steam/pz-dedicated/steamapps/workshop

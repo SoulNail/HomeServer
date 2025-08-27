@@ -1,1 +1,15 @@
  
+version: "3.2"
+
+services:
+  sun-panel:
+    image: "hslr/sun-panel:latest"
+    container_name: sun-panel
+    volumes:
+      - /home/soulnail/sunpanel/conf:/app/conf
+      - /var/run/docker.sock:/var/run/docker.sock:ro # Mount the Docker socket
+      - /home/soulnail/sunpanel/runtime:/app/runtime # Mount the log directory
+      # - /mnt/sata1-1:/os # Mount the hard drive (modify according to your needs)
+    ports:
+      - 3002:3002
+    restart: always
