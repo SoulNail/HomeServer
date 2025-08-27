@@ -1,8 +1,8 @@
-# 家庭服务器与网络项目 | harukaze.site
+# 家庭服务器与网络项目 | harukaze
 
 本仓库记录并开源我的家庭网络与服务器最佳实践，包括网络拓扑、反向代理、DDNS、OpenVPN、以及在 192.168.110.51 上基于 Docker 部署的服务：Aria2Pro、FileCodeBox、Home Assistant、Project Zomboid 专用服务器、Sunpanel 导航页。
 
-- 域名：harukaze.site
+- 域名：harukaze.xxx（暂时不漏）
 - DDNS：OpenWrt 上 ddns-go
 - 远程访问：OpenVPN（主路由下发一键回家）
 - 旁路由：OpenWrt（192.168.110.2）
@@ -31,10 +31,7 @@
 - docs/04-containers.md Docker 与 Compose
 - docs/05-domain-ddns.md 域名与 DDNS（ddns-go）
 - docs/06-vpn-remote-access.md OpenVPN 一键回家
-- docs/07-reverse-proxy.md Traefik 反向代理与证书
-- docs/08-backup-restore.md 备份与恢复
-- docs/09-monitoring.md 监控与日志
-- docs/10-troubleshooting.md 故障排查
+
 
 安全提醒
 - 默认不暴露管理面板到公网。公开服务需经反向代理 + TLS + 认证。

@@ -8,4 +8,4 @@
 - 内网：192.168.110.0/24
 - 旁路由：OpenWrt 192.168.110.2（ddns-go、OpenVPN）
 - 服务器：192.168.110.51（Docker）
-- 域名：harukaze.site
+- 域名：harukaze
